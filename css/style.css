@@ -7,3 +7,29 @@ body {
     font-size: 120%;
     background: #F8F8FF;
 }
+
+/* Homepage */
+@media only screen and (min-width: 1024px) {
+    #homepageContainer {
+        margin-top: 100px;
+        border: 1px solid black;
+        width: 40%;
+    }
+
+    #homepageText {
+        padding-left: 13%;
+        padding-right: 10%;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    #homepageContainer {
+        margin-top: 50px;
+        border: 1px solid black;
+    }
+
+    #homepageText {
+        padding-left: 16%;
+        padding-right: 15%;
+    }
+}
