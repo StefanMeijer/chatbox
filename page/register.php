@@ -17,7 +17,6 @@ function inputFields()
     $username = htmlspecialchars($_POST['username']);
     $email = htmlspecialchars($_POST['email']);
     $password_1 = htmlspecialchars($_POST['password_1']);
-    $password_2 = htmlspecialchars($_POST['password_2']);
 
     // Make sure form is filled in correctly
     if (empty($username)) {
@@ -28,9 +27,6 @@ function inputFields()
     }
     if (empty($password_1)) {
         array_push($errors, "Password is required");
-    }
-    if ($password_1 != $password_2) {
-        array_push($errors, "The two passwords do not match");
     }
     if (count($errors) == 0) {
         checkUser($db, $errors, $username, $password_1, $email);
