@@ -8,6 +8,14 @@ body {
     background: #F8F8FF;
 }
 
+.btn-border {
+    border: 1px solid black !important;
+}
+
+.errorMessage {
+    color: salmon;
+}
+
 /* Homepage */
 @media only screen and (min-width: 1024px) {
     #homepageContainer {
@@ -31,5 +39,14 @@ body {
     #homepageText {
         padding-left: 16%;
         padding-right: 15%;
+    }
+}
+
+/* Registerpage */
+@media only screen and (min-width: 1024px) {
+    #registerpageContainer {
+        margin-top: 100px;
+        border: 1px solid black;
+        width: 15%;
     }
 }
