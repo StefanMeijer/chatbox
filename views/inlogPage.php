@@ -5,27 +5,27 @@ if (!isset($_GET["page"])) {
     exit;
 }
 ?>
-<div class="header">
-<h2>Login</h2>
-</div>
-<form method="post" action="">
+<div class="container" id="inlogpageContainer">
+	<center>
+		<h5>Inloggen</h5>
+		<form method="post" action="">
+			<div class="form-group">
+				<input class="form-control" type="text" name="username" placeholder="Gebruikersnaam">
+			</div>
+			<div class="form-group">
+				<input class="form-control" type="password" name="password" placeholder="Wachtwoord">
+			</div>
+			<div class="form-group errorMessage">
+				<?php
+                //	Display Error
+                echo display_error();
+                ?>
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn btn-lg btn-border" name="login_btn">Login</button>
+			</div>
 
-	<div class="input-group">
-		<label>Username</label>
-		<input type="text" name="username">
-	</div>
-	<div class="input-group">
-		<label>Password</label>
-		<input type="password" name="password">
-	</div>
-	<div class="input-group">
-		<button type="submit" class="btn" name="login_btn">Login</button>
-	</div>
-	<?php
-	//	Display Error
-	echo display_error();
-	?>
-	<p>
-		Not yet a member? <a href="index.php?page=register">Sign up</a>
-	</p>
-</form>
+		</form>
+	</center>
+</div>
+

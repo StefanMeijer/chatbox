@@ -16,8 +16,10 @@ body {
     color: salmon;
 }
 
-/* Homepage */
+
 @media only screen and (min-width: 1024px) {
+
+    /* Homepage */
     #homepageContainer {
         margin-top: 100px;
         border: 1px solid black;
@@ -28,9 +30,25 @@ body {
         padding-left: 13%;
         padding-right: 10%;
     }
+
+    /* Register */
+    #registerpageContainer {
+        margin-top: 100px;
+        border: 1px solid black;
+        width: 15%;
+    }
+
+    /* Login */
+    #inlogpageContainer {
+        margin-top: 100px;
+        border: 1px solid black;
+        width: 15%;
+    }
 }
 
 @media only screen and (max-width: 1023px) {
+
+    /* Homepage */
     #homepageContainer {
         margin-top: 50px;
         border: 1px solid black;
@@ -43,10 +61,4 @@ body {
 }
 
 /* Registerpage */
-@media only screen and (min-width: 1024px) {
-    #registerpageContainer {
-        margin-top: 100px;
-        border: 1px solid black;
-        width: 15%;
-    }
-}
+@media only screen and (min-width: 1024px) {}
