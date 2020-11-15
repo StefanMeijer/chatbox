@@ -12,7 +12,7 @@ body {
     border: 1px solid black !important;
 }
 
-.errorMessage {
+.error {
     color: salmon;
 }
 
@@ -60,5 +60,12 @@ body {
     }
 }
 
-/* Registerpage */
-@media only screen and (min-width: 1024px) {}
+/* Chatbox */
+#chatboxContainer {
+    margin-top: 10px;
+}
+
+#chatForm {
+    border: 1px solid black !important;
+    margin-block-end: 0em !important;
+}
