@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>User login logout register create system</title>
+    <title>Lekker Chatten</title>
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Bootstrap -->
@@ -59,9 +59,6 @@
                 <?php if (isset($_SESSION['user']) && $_SESSION['user']['user_type'] == 'admin') { ?>
                 <li class="nav-item">
                     <a class="nav-link" href="index.php?page=admin">admin</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.php?page=create_admin">create admin</a>
                 </li>
                 <?php } ?>
             </ul>
