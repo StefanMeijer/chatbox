@@ -22,7 +22,8 @@
     <!-- Logo & Nav toggler -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.php?">
-            <img src="https://cdn.discordapp.com/attachments/428982026822221835/778065225512910898/logo.png" width="" height="20" alt="">
+            <img src="https://cdn.discordapp.com/attachments/428982026822221835/778065225512910898/logo.png" width=""
+                height="20" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,32 +34,35 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?">home</a>
+                    <a class="nav-link" href="index.php?">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php?page=contact">Contact</a>
                 </li>
                 <!-- Non-logged in users -->
                 <?php if (!isset($_SESSION['user'])) { ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?page=login">login</a>
+                    <a class="nav-link" href="index.php?page=login">Inloggen</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?page=register">register</a>
+                    <a class="nav-link" href="index.php?page=register">Registreren</a>
                 </li>
                 <?php } ?>
 
                 <!-- Logged in users only -->
                 <?php if (isset($_SESSION['user'])) { ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?page=userpage">chatbox</a>
+                    <a class="nav-link" href="index.php?page=userpage">Chatbox</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="?&logout=true">logout</a>
+                    <a class="nav-link" href="?&logout=true">Uitloggen</a>
                 </li>
                 <?php } ?>
 
                 <!-- Admin only -->
                 <?php if (isset($_SESSION['user']) && $_SESSION['user']['user_type'] == 'admin') { ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?page=admin">admin</a>
+                    <a class="nav-link" href="index.php?page=admin">Beheerderspaneel</a>
                 </li>
                 <?php } ?>
             </ul>
