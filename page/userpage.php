@@ -29,9 +29,8 @@ if (isset($_POST['chat'])) {
 //  Upload chat message
 function uploadChat($chat, $curUser, $db)
 {
-    $query = "INSERT INTO chat (text, users_ID) VALUES ('$chat', '$curUser')";
-    $stmt = $db->prepare($query);
-    $stmt->execute();
+    $query = $db->prepare("INSERT INTO chat (text, users_ID) VALUES (:chatcontent, :curuser)");
+    $query->execute(array(':chatcontent' => $chat, ':curuser' => $curUser));
 }
 
 include_once('views/userPage.php');

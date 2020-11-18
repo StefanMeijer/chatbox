@@ -5,11 +5,16 @@
 
 body {
     font-size: 120%;
-    background: #F8F8FF;
+    background: gray !important;
 }
 
 .btn-border {
     border: 1px solid black !important;
+    background: white !important;
+}
+
+table {
+    background: white !important;
 }
 
 .error {
@@ -40,6 +45,13 @@ body {
 
     /* Login */
     #inlogpageContainer {
+        margin-top: 100px;
+        border: 1px solid black;
+        width: 15%;
+    }
+
+    /* Contact */
+    #contactpageContainer {
         margin-top: 100px;
         border: 1px solid black;
         width: 15%;

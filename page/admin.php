@@ -70,7 +70,8 @@ function changePassword($db)
     //  Mail the new password to the user
     $msg = 'Uw wachtwoord is veranderd naar: ' . $randomPassword . '<br> Van het account: ' . $user . '<br><br>Met vriendelijke groet, <br>Lekker Chatten team';
     $sbj = 'Wachtwoord veranderd';
-    phpMailer($msg, $sbj, $email);
+    $alertmessage = 'Wachtwoord is veranderd';
+    phpMailer($msg, $sbj, $email, $alertmessage);
 }
 
 //  Function to delete chat-messages
