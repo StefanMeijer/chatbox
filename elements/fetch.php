@@ -9,7 +9,7 @@ try {
 
     //Loop to display chat-texts & usernames that belong to the message
     while ($data=$select->fetch()) {
-            echo '<span>'.$data['username'].'</span><br>';
+            echo '<span class="font-italic">'.$data['username'].'</span><br>';
             echo '<span>'.$data['text'].'</span>';
             echo '<br><br>';
     }

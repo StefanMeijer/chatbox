@@ -56,7 +56,7 @@ function generateRandomPassword($length = 10)
 }
 
 //  Function to send mail
-function phpMailer($msg, $sbj, $email)
+function phpMailer($msg, $sbj, $email, $alertmessage)
 {
     // Load PHP Mailer
     require 'libraries/PHPMailerAutoload.php';
@@ -86,7 +86,7 @@ function phpMailer($msg, $sbj, $email)
     try {
         $mail->send();
         //Moet session succesfull worden
-        echo "<script>alert('Wachtwoord veranderd' );</script>";
+        echo "<script>alert('$alertmessage' );</script>";
     } catch (Exception $e) {
         //Moet session unsuccesfull worden
         echo "<script type='text/javascript'>alert('Bericht kon niet worden verstuurd');</script>";
